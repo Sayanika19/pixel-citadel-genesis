@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,21 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				pixel: {
+					purple: {
+						light: '#9b87f5',
+						DEFAULT: '#7E69AB',
+						dark: '#6E59A5'
+					},
+					black: '#1A1F2C',
+					accent: '#D6BCFA',
+					gray: '#8E9196'
 				}
+			},
+			fontFamily: {
+				pixel: ['Press Start 2P', 'cursive'],
+				sans: ['Inter', 'sans-serif']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +99,16 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pixel-pulse': {
+					'0%, 100%': { transform: 'scale(1)' },
+					'50%': { transform: 'scale(1.05)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pixel-pulse': 'pixel-pulse 2s ease-in-out infinite'
 			}
 		}
 	},
